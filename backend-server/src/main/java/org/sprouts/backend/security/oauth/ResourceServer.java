@@ -29,8 +29,7 @@ public class ResourceServer {
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                     .and()
                     .authorizeRequests()
-                    .antMatchers("/authority/**").authenticated()
-                    .antMatchers("/note/user/**").hasRole("USER");
+                    .antMatchers("/authority/**").authenticated();
         }
 
     }

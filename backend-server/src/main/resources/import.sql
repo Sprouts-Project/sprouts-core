@@ -10,7 +10,9 @@ INSERT INTO useraccount (id, version, username, password) VALUES ('2', '0', 'use
 
 INSERT INTO user_authority (user_account, authority) VALUES ('2', '1');
 
-INSERT INTO note (id, version, text, public, publishingDate, userAccount) VALUES ('3', '0', 'This is my first note. Hello world!', TRUE, '2017/05/20 18:58', '2');
-INSERT INTO note (id, version, text, public, publishingDate, userAccount) VALUES ('4', '0', 'And this is my second note', FALSE, '2017/05/20 18:59', '2');
+INSERT INTO user (id, version, name, userAccountId) VALUES ('3', '0', 'John Doe', '2');
+
+INSERT INTO note (id, version, text, public, publishingDate, user) VALUES ('4', '0', 'This is my first note. Hello world!', TRUE, '2017/05/20 18:58', '3');
+INSERT INTO note (id, version, text, public, publishingDate, user) VALUES ('5', '0', 'And this is my second note', FALSE, '2017/05/20 18:59', '3');
 
 commit;
