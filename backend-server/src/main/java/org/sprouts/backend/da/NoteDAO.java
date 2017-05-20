@@ -11,6 +11,6 @@ public interface NoteDAO extends CrudRepository<Note, Integer> {
 
     Collection<Note> findByUserAccount(UserAccount userAccount);
 
-    @Query("select n from Note n where n.isPublic = true")
+    @Query("select n from Note n where n.public = true")
     Collection<Note> findAllPublic();
 }
