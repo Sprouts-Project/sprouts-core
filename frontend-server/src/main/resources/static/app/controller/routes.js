@@ -1,6 +1,6 @@
 'use strict';
 (function() {
-	angularApp.controllers.config([ '$routeProvider', function($routeProvider) {
+    angularApp.controllers.config([ '$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {
             controller : 'WelcomeController',
             templateUrl : '/app/view/welcome/welcome.html'
