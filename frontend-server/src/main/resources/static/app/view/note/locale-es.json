@@ -1,0 +1,13 @@
+{
+  "note.published" : "Publicado el",
+  "note.by" : "por",
+  "note.myNotes" : "Mis notas",
+  "note.create" : "Nueva nota",
+  "note.information" : "Crear una nueva nota",
+  "note.text" : "Texto",
+  "note.text_required" : "El campo 'texto' es obligatorio",
+  "note.public" : "¿Hacerla pública?",
+  "note.public.yes" : "Sí",
+  "note.public.no" : "No",
+  "note.submit" : "Enviar"
+}

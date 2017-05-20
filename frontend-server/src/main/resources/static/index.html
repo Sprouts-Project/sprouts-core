@@ -24,6 +24,7 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#/">{{ 'index.home' | translate }}</a></li>
+						<li><a href="#/note/user/list" ng-controller="LoginController" ng-show="isLoggedIn">{{ 'index.myNotes' | translate }}</a></li>
 						<li><a href="#/login" ng-controller="LoginController" ng-hide="isLoggedIn">{{ 'index.login' | translate }}</a></li>
 						<li><a href="#" ng-controller="LoginController" ng-click="logout()" ng-show="isLoggedIn">{{ 'index.logout' | translate }}</a></li>
 					</ul>
@@ -75,7 +76,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.13.1/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 	<script src="./app/app.js"></script>
 	<script src="./app/controller/routes.js"></script>
-	<script src="./app/controller/welcomeController.js"></script>
+	<script src="./app/controller/noteController.js"></script>
 	<script src="./app/controller/loginController.js"></script>
 	<script src="./app/controller/apiDocController.js"></script>
 </body>

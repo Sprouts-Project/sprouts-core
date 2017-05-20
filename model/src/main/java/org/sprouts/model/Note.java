@@ -61,16 +61,16 @@ public class Note extends DomainEntity {
 
     // Relationships ----------------------------------------------------------
 
-    private User user;
+    private UserAccount userAccount;
 
     @NotNull
     @Valid
     @ManyToOne(optional = false)
-    public User getUser() {
-        return user;
+    public UserAccount getUserAccount() {
+        return userAccount;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserAccount(UserAccount userAccount) {
+        this.userAccount = userAccount;
     }
 }

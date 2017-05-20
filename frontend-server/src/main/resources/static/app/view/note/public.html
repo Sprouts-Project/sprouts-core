@@ -1,0 +1,8 @@
+<div class="content" ng-init="loadPublicNotes()">
+    <div class="well well-lg" ng-repeat="note in publicNotes">
+        <p>{{note.text}}</p>
+        <hr>
+        <p class="text-muted">{{'note.published' | translate}} {{note.publishingDate | date:'yyyy-MM-dd HH:mm'}} {{'note.by' | translate}}
+        {{note.userAccount.username}}</p>
+    </div>
+</div>

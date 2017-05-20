@@ -1,0 +1,43 @@
+<h1>{{ 'note.information' | translate }}</h1>
+<div class="row">
+    <form novalidate class="simple-form" name="noteForm">
+        <div class="form-group">
+            <label for="text">{{ 'note.text' | translate }}</label> <textarea
+                class="form-control"
+                name="text"
+                placeholder="{{ 'note.text' | translate }}"
+                ng-model="note.text"
+                required></textarea>
+            <div ng-show="noteForm.$submitted || noteForm.text.$touched">
+                        <span ng-show="noteForm.text.$error.required"
+                              class="hasError">{{ 'note.text_required' | translate }}</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="public">{{ 'note.public' | translate }}</label>
+            <div class="radio">
+                <label> <input type="radio" name="public"
+                               id="publicTrue" value="true" ng-model="note.public" checked/>
+                    {{ 'note.public.yes' | translate }}
+                </label> <label> <input type="radio" name="public"
+                                        id="publicFalse" value="false" ng-model="note.public"/> {{ 'note.public.no'
+                |
+                translate }}
+            </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-default"
+                   ng-click="saveNote()"
+                   value="{{ 'note.submit' | translate }}"
+                   ng-disabled="noteForm.$invalid"/>
+        </div>
+
+        <div class="alert alert-danger alert-dismissable" ng-show="error">
+            <a class="close" data-dismiss="alert" aria-label="close" ng-click="error = false">&times;</a>
+            <strong>{{ 'index.oops' | translate }}</strong> {{ 'index.error' | translate }}.
+        </div>
+    </form>
+</div>

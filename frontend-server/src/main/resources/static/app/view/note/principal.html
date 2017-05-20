@@ -1,0 +1,12 @@
+<div class="content" ng-init="loadPrincipalNotes()">
+    <h1 translate>note.myNotes</h1>
+    <div class="well well-lg" ng-repeat="note in principalNotes">
+        <p>{{note.text}}</p>
+        <hr>
+        <p class="text-muted">{{'note.published' | translate}} {{note.publishingDate | date:'yyyy-MM-dd HH:mm'}} {{'note.by' | translate}}
+        {{note.userAccount.username}}</p>
+    </div>
+
+    <a class="btn btn-default" href="#/note/user/create" translate>note.create</a>
+    <br><br>
+</div>

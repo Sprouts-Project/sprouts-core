@@ -32,3 +32,20 @@ zuul:
       path: /v2/authority/*
       url: http://localhost:2222/authority
       sensitive-headers: Cookie,Set-Cookie
+    note:
+      path: /note/*
+      url: http://localhost:2222/note
+      sensitive-headers: Cookie,Set-Cookie
+    note-user:
+      path: /note/user/*
+      url: http://localhost:2222/note/user
+      sensitive-headers: Cookie,Set-Cookie
+    note-api:
+      path: /v2/note/*
+      url: http://localhost:2222/note
+      sensitive-headers: Cookie,Set-Cookie
+    note-user-api:
+      path: /v2/note/user/*
+      url: http://localhost:2222/note/user
+      sensitive-headers: Cookie,Set-Cookie
+

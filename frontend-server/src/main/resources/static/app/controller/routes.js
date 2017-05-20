@@ -2,8 +2,14 @@
 (function() {
     angularApp.controllers.config([ '$routeProvider', function($routeProvider) {
         $routeProvider.when('/', {
-            controller : 'WelcomeController',
-            templateUrl : '/app/view/welcome/welcome.html'
+            controller : 'NoteController',
+            templateUrl : '/app/view/note/public.html'
+        }).when('/note/user/list', {
+            controller : 'NoteController',
+            templateUrl : '/app/view/note/principal.html'
+        }).when('/note/user/create', {
+            controller : 'NoteController',
+            templateUrl : '/app/view/note/create.html'
         }).when('/login', {
             controller : 'LoginController',
             templateUrl : '/app/view/login/login.html'

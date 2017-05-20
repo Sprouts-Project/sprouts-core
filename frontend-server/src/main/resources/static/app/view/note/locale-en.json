@@ -1,0 +1,13 @@
+{
+  "note.published" : "Published at",
+  "note.by" : "by",
+  "note.myNotes" : "My notes",
+  "note.create" : "New note",
+  "note.information" : "Create a new note",
+  "note.text" : "Text",
+  "note.text_required" : "The field 'text' is required",
+  "note.public" : "Make it public?",
+  "note.public.yes" : "Yes",
+  "note.public.no" : "No",
+  "note.submit" : "Submit"
+}

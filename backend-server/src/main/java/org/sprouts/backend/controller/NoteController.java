@@ -2,10 +2,7 @@ package org.sprouts.backend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.sprouts.backend.service.AuthorityService;
 import org.sprouts.backend.service.NoteService;
 import org.sprouts.model.Authority;
@@ -35,7 +32,7 @@ public class NoteController extends AbstractController {
     }
 
     @RequestMapping(value = "/user/save", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public int save(@RequestParam Note note) throws Exception {
+    public int save(@RequestBody Note note) throws Exception {
         return noteService.save(note);
     }
 }
